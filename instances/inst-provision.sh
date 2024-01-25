@@ -14,3 +14,6 @@ ansible-playbook -e component=cart setup.yaml
 ansible-playbook -e component=shipping setup.yaml
 ansible-playbook -e component=payment setup.yaml
 ansible-playbook -e component=web setup.yaml
+
+cd /tmp
+rm -rf robo-shop.ansible

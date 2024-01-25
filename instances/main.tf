@@ -167,8 +167,8 @@ module "web" {
   ami                    = data.aws_ami.centos8.id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_ssm_parameter.web_sg_id.value]
-  #subnet_id              = local.public_subnet_id  #public subnet isnt connecting to internet
-  subnet_id = local.private_subnet_id
+  subnet_id              = local.public_subnet_id #public subnet isnt connecting to internet
+  #subnet_id = local.private_subnet_id
 
   tags = merge(
     var.common_tags, {
