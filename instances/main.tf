@@ -269,7 +269,7 @@ module "route53_records" {
       ]
     },
     {
-      name = "payments"
+      name = "payment"
       type = "A"
       ttl  = 300
       records = [
